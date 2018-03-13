@@ -1,0 +1,25 @@
+<div class="container input-group my-3 w-50">
+  <input type="text" (keyup.enter)="keySearch();" class="form-control" [(ngModel)]="movieSearch" placeholder="Search movie.." >
+  <div class="input-group-append">
+     <button type="submit" id="search-ico" (click)="search()"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+<div class="container py-3" *ngFor="let item of popularData">
+<div class="card">
+  <div class="row ">
+  <div class="col-md-3" >
+  <img src="img-fluid d-block" [attr.src]="movieUrl+item.poster_path" alt="Image not found">
+      </div>
+      <div class="col-md-9 px-3">
+        <div class="card-block px-2 py-2">
+          <h4 class="card-title">{{item.title}}</h4>
+          <p class="card-text">From &nbsp;{{item.release_date |date}}</p>
+          <p class="card-text">{{item.overview}}</p>
+          <p class="card-text"><strong>Rating</strong>:{{item.vote_average}}</p>
+          <a href="#" class="btn btn-primary">Add to Favourite</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

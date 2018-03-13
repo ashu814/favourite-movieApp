@@ -1,0 +1,9 @@
+/* css for card title*/
+.card-title{
+	font-family: Shrikhand;
+	font-weight: bold;
+}
+/*css for card text*/
+.card-text{
+	font-family: Playfair Display;
+}
